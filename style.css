@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+.fixedContainer {
+    display: flex; /* Use flexbox for layout */
+    width: 1278px; /* Set the fixed width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    border: 1px solid #ccc; /* Add a border for clarity */
+    border-left: 2px solid white;
+}
+
+/* Scrollbar made for individual side */
+.scrollLeft {
+    max-height: 800px; 
+    overflow-y: auto;
+    background-color: #040420;
+}
+
+.scrollRight {
+    max-height: 700px;
+    overflow-y: auto; 
+    background-color: #040420;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+  }
+ 
+
+  /* header */
+  body {
+      overflow-x: hidden;
+  }
+
+  /* HEADER STYLING */
+  
+  header {
+      background-color : #040420 ;
+      border-bottom: 2px solid rgb(243, 235, 235);
+  }
+
+   /* fixed Header made */
+  .fixed-header{     
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 5;
+    background-color:#040420;
+  }
+
+  header .inputs  {
+      position: relative;
+      
+  }
+  
+  header .inputs  .first{
+      position: absolute;
+      left: 10px;
+      margin-bottom: 10px;
+      top: 25%;
+  }
+  
+  
+  header .inputs  .second{
+      color: #fff;
+      border-color: #18d860;
+      font-size: 15px;
+      width: 300px;
+      padding: 4px 0 4px 36px;
+      background-color : #84b1a7 ;
+  }
+  
+  
+  header .inputs  .third{
+      position: absolute;
+      top: 25%;
+      right: 10px;
+  
+  }
+  
+  /* SECTION Styling */
+  .fixedContainer {
+      background-color : #040420 ;
+      /* border-left: 2px solid rgb(251, 255, 252);
+      border-right: 2px solid rgb(251, 255, 252); 
+      border-bottom: 2px solid rgb(251, 255, 252); */
+      border: white;
+  }
+
+   div .leftSide{
+      background-color: #6f0725;
+      border-left:16px solid #ddd;
+
+   }
+  /* .section-with-border{
+      border-left: 2px solid rgb(243, 235, 235);
+      /* border-right: 2px solid rgb(243, 235, 235); */
+      /* padding: 15px;
+  } */
+  
+  /* First section */
+  div .firstSection > div {
+      padding: 5px 10px;
+      margin-top: 120px;
+  }
+  
+  div .firstSection .bannerBox {
+      position: relative;
+      overflow: hidden;
+  }
+  
+  div .firstSection .bannerBox img {
+      object-fit: cover;
+  }
+  
+  div .firstSection .bannerBox img:hover {
+      scale: 1.2;
+      transition: all ease 2s;
+      border: 1x solid red;
+      cursor: pointer;
+  }
+  
+  /* Second Section */
+  div .secondSection > div {
+      margin-bottom: 10px;
+  }
+  
+  
+  div .secondSection .cardBox .leftside .imageBox {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+  }
+  
+  div .secondSection .cardBox .leftside .imageBox img {
+      object-fit: cover;
+  }
+  
+  div .secondSection .cardBox .leftside .imageBox img:hover {
+      /* scale: 1.2;
+      transition: all ease 1s; */
+      cursor: pointer;
+      opacity: 0.6;
+  }
+
+  div .thirdSection {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+  }
+  
+  div .thirdSection > .artistBox  {
+      padding: 0 10px;
+  }
+  
+  div .thirdSection .artistBox {
+      position: relative;
+  }
+  
+  div .thirdSection .artistImage {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+     
+  }
+  
+  div .thirdSection .text-center{
+      font-family: serif;
+  }
+
+  div .thirdSection .artistImage img {
+      object-fit: cover;
+      border-radius: 0%;
+  }
+  
+  
+  
+  div .forthSection {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      background-color : rgb(20, 30, 50) ;
+      scroll-behavior: smooth;
+  }
+
+  
+  div .forthSection > .artistBox  {
+      padding: 0 10px;
+  }
+  
+  div .forthSection .artistBox  {
+      position: relative;
+      cursor: pointer;
+      margin-left: 10px;
+
+  }
+  
+  div .forthSection .artistImage {
+      width: 100%;
+      height: auto;
+  }
+
+
+  .fix {
+      position: sticky;
+      left: 0;
+      width: 200px; /*width as needed of fixed block */
+      z-index: 1;
+      background-color: rgb(20, 30, 50);
+ }
+
+ .fix .artistImage{
+      border: 10px solid rgb(20, 30, 50);
+ }
+
+ .fix .imgInsideText {
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    background-color: transparent;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: cursive;
+    font-style: italic;  
+}
+
+ .move {
+      margin-left: 2px; /* Width needed from the fixed box */
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+ }
+
+ .move .artistImage {
+      padding-top: 24px;/* maintaing distance from top */
+ }
+
+ .move .imgInsideText {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      background-color: transparent;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: cursive;
+      font-style: italic;  
+}
+
+
+/* Combined Text set for fix and move class */
+  /* section .forthSection .imgInsideText {
+      position: absolute;
+      top: 40%;
+      left: 20%;
+      background-color: transparent;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: cursive;
+      font-style: italic;
+     
+  } */
+  
+  
+  div .forthSection .artistImage img {
+      object-fit: cover;
+      border-radius: 50%;
+  }
+  
+
+
+  div .fifthSection {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+  }
+  
+  div .fifthSection > .movieBox {
+      padding: 0 10px;
+  }
+  
+  div .fifthSection .movieBox .movieImage {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+  }
+  
+  
+  div .fifthSection .movieBox .movieText .movieName {
+      color: #fff;
+      font-size: 15px;
+      font-family: serif;
+  }
+  
+  
+  div .fifthSection .movieBox .movieText .movieDate {
+      margin-top: -15px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: white;
+  }
+  
+  
+  div .rightSide {
+      border: 1px solid #ddd;
+      border-top: none;
+      border-right: 10px solid white;
+      border-bottom: none;
+      margin-top: 100px;
+  }
+
+  div .rightSide .imageBox:hover{
+      cursor: pointer;
+  }
+
+  #heart:hover{
+      cursor: pointer;
+  }
+  
+ /* CSS for the fixed block */
+.rightSide .fixQueue {
+    width: 400px; 
+    height: 60px;
+    /* border:2px solid #fff; */
+    border-top: 2px solid #f5f5fa;
+    background-color: #1d1db7;
+    position:fixed;
+    z-index: 2;
+}
+
+.movePlay{
+    padding-top: 80px;
+    position:absolute;
+    /* overflow-y: hidden; */
+
+}
+
+  
+  @media only screen and (max-width: 768px) {
+    
+    
+      header .inputs  .third{
+        
+          width: 100px;
+       
+      }
+  
+  }
+  
+  
