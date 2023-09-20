@@ -3,27 +3,6 @@
     padding: 0; 
 }
 
-.fixedContainer {
-    display: flex; /* Use flexbox for layout */
-    width: 1278px; /* Set the fixed width of the container */
-    margin: 0 auto; /* Center the container horizontally */
-    border: 1px solid #ccc; /* Add a border for clarity */
-    border-left: 2px solid white;
-}
-
-/* Scrollbar made for individual side */
-.scrollLeft {
-    max-height: 800px; 
-    overflow-y: auto;
-    background-color: #040420;
-}
-
-.scrollRight {
-    max-height: 700px;
-    overflow-y: auto; 
-    background-color: #040420;
-}
-
 
 
 /* width */
@@ -34,6 +13,7 @@
 
   /* header */
   body {
+      overflow-y: scroll;
       overflow-x: hidden;
   }
 
@@ -42,16 +22,6 @@
   header {
       background-color : #040420 ;
       border-bottom: 2px solid rgb(243, 235, 235);
-  }
-
-   /* fixed Header made */
-  .fixed-header{     
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index: 5;
-    background-color:#040420;
   }
 
   header .inputs  {
@@ -70,9 +40,9 @@
   header .inputs  .second{
       color: #fff;
       border-color: #18d860;
-      font-size: 15px;
-      width: 300px;
-      padding: 4px 0 4px 36px;
+      font-size: 25px;
+      width: 340px;
+      padding: 4px 0 4px 50px;
       background-color : #84b1a7 ;
   }
   
@@ -83,106 +53,170 @@
       right: 10px;
   
   }
+
+   /* fixed Header made */
+  .fixed-header{     
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index: 2;
+      background-color:#040420;
+  }
+
   
   /* SECTION Styling */
-  .fixedContainer {
+  section {
+      margin-top: 100px;
+      padding: 40px;
+      /* display: flex; */
+      border: 2px solid white;
       background-color : #040420 ;
-      /* border-left: 2px solid rgb(251, 255, 252);
-      border-right: 2px solid rgb(251, 255, 252); 
-      border-bottom: 2px solid rgb(251, 255, 252); */
-      border: white;
+      height: 100vh;
+      width: auto; /* Set the fixed width of the container */
+      overflow: auto;
   }
 
-   div .leftSide{
-      background-color: #6f0725;
-      border-left:16px solid #ddd;
-
-   }
-  /* .section-with-border{
-      border-left: 2px solid rgb(243, 235, 235);
-      /* border-right: 2px solid rgb(243, 235, 235); */
-      /* padding: 15px;
+   /* .fixedContainer{
+      height: 100%;
+      overflow: auto;
+      padding: 0px;
   } */
+
+  .leftSide{
+      overflow-y: scroll;
+      overflow-x: hidden;
+      padding-top: 40px;
+      border-right:2px solid white;
+
+      width:66%;
+  }
+
+  .leftSide ::-webkit-scrollbar{
+      display: none;
+  }
   
+
+  /* Start */
+
   /* First section */
-  div .firstSection > div {
-      padding: 5px 10px;
-      margin-top: 120px;
-  }
-  
-  div .firstSection .bannerBox {
-      position: relative;
-      overflow: hidden;
-  }
-  
-  div .firstSection .bannerBox img {
-      object-fit: cover;
-  }
-  
-  div .firstSection .bannerBox img:hover {
-      scale: 1.2;
-      transition: all ease 2s;
-      border: 1x solid red;
-      cursor: pointer;
-  }
-  
+  section .firstSection > div {
+    padding: 2px 5px;
+    /* margin-top: 120px; */
+}
+
+  .firstSection .bannerBox {
+    position: relative;
+    overflow: hidden;
+}
+
+  .firstSection .bannerBox img {
+    object-fit: cover;
+    padding-right: 10px;
+}
+
+  .firstSection .bannerBox img:hover {
+    scale: 1.4;
+    /* transition: all ease 2s; */
+    /* transform: scale(1.4); */
+    border: 1x solid red;
+    cursor: pointer;
+}
+
+
   /* Second Section */
-  div .secondSection > div {
+  section .secondSection > div {
       margin-bottom: 10px;
   }
+
+  .secondSection{
+    margin-bottom: 40px;
+  }
   
-  
-  div .secondSection .cardBox .leftside .imageBox {
+  .imageBox {
       width: 100%;
       height: 100%;
       overflow: hidden;
       position: relative;
   }
   
-  div .secondSection .cardBox .leftside .imageBox img {
+  .leftside .imageBox img {
       object-fit: cover;
   }
   
-  div .secondSection .cardBox .leftside .imageBox img:hover {
+  .playButton{
+      display: none;
+      /* position: absolute; */
+      top: 38%;
+      left: 40%;
+      background-color: transparent;
+  }
+  
+  .imageBox:hover .playButton{
+      display:block;
+      position: absolute;
+      top: 38%;
+      left: 40%;
+      background-color: transparent;
+  }
+  
+  .imageBox:hover .latestImg {
       /* scale: 1.2;
       transition: all ease 1s; */
       cursor: pointer;
       opacity: 0.6;
   }
 
-  div .thirdSection {
+
+
+/* check correction */
+
+
+  .artist {
+      display: flex;
       overflow-x: scroll;
-      overflow-y: hidden;
-      scroll-behavior: smooth;
+  }
+  .artist ::-webkit-scrollbar{
+    display: none;
   }
   
-  div .thirdSection > .artistBox  {
-      padding: 0 10px;
+
+  /* till here check */
+
+  .thirdSection > .artistBox  {
+      padding-right: 20px;
+      padding-top: 20px;
+      
   }
   
-  div .thirdSection .artistBox {
+  .thirdSection .artistBox {
       position: relative;
+      /* display:inline-block;
+      white-space: nowrap; */
   }
   
-  div .thirdSection .artistImage {
+  .thirdSection .artistImage {
       width: 100%;
       height: auto;
       cursor: pointer;
      
   }
   
-  div .thirdSection .text-center{
+  .thirdSection .text-center{
       font-family: serif;
+      font-size: 25px;
   }
 
-  div .thirdSection .artistImage img {
+  .thirdSection .artistImage img {
       object-fit: cover;
-      border-radius: 0%;
+      height: 160px;
+      width: 160px;
+      border-radius: 50%;
   }
   
   
   
-  div .forthSection {
+  .forthSection {
       overflow-x: scroll;
       overflow-y: hidden;
       background-color : rgb(20, 30, 50) ;
@@ -190,45 +224,47 @@
   }
 
   
-  div .forthSection > .artistBox  {
-      padding: 0 10px;
+  .forthSection > .artistBox  {
+      padding-right:10px;
   }
   
-  div .forthSection .artistBox  {
-      position: relative;
-      cursor: pointer;
-      margin-left: 10px;
-
-  }
-  
-  div .forthSection .artistImage {
-      width: 100%;
-      height: auto;
-  }
-
-
   .fix {
       position: sticky;
       left: 0;
       width: 200px; /*width as needed of fixed block */
       z-index: 1;
       background-color: rgb(20, 30, 50);
- }
+  }
 
- .fix .artistImage{
-      border: 10px solid rgb(20, 30, 50);
- }
+  .fix .artistImage{
+      border: 20px solid rgb(20, 30, 50);
+  }
 
- .fix .imgInsideText {
-    position: absolute;
-    top: 30%;
-    left: 22%;
-    background-color: transparent;
-    font-size: 28px;
-    font-weight: 600;
-    font-family: cursive;
-    font-style: italic;  
-}
+
+  .fix .imgInsideText {
+      position: absolute;
+      top: 38%;
+      left: 30%;
+      background-color: transparent;
+      font-size: 30px;
+      font-weight: 600;
+      font-family: cursive;
+      font-style: italic;  
+  }
+
+
+  .forthSection .artistBox  {
+      position: relative;
+      cursor: pointer;
+      margin-left: 10px;
+
+  }
+  
+  .forthSection .artistImage {
+      width: 100%;
+      height: auto;
+  }
+
 
  .move {
       margin-left: 2px; /* Width needed from the fixed box */
@@ -238,13 +274,13 @@
  }
 
  .move .artistImage {
-      padding-top: 24px;/* maintaing distance from top */
+      padding-top: 34px;/* maintaing distance from top */
  }
 
  .move .imgInsideText {
       position: absolute;
       top: 40%;
-      left: 20%;
+      left: 24%;
       background-color: transparent;
       font-size: 22px;
       font-weight: 700;
@@ -267,68 +303,76 @@
   } */
   
   
-  div .forthSection .artistImage img {
+  .forthSection .artistImage img {
       object-fit: cover;
       border-radius: 50%;
   }
   
 
 
-  div .fifthSection {
+  .fifthSection {
       overflow-x: scroll;
       overflow-y: hidden;
       scroll-behavior: smooth;
   }
   
-  div .fifthSection > .movieBox {
+  .fifthSection > .movieBox {
       padding: 0 10px;
   }
   
-  div .fifthSection .movieBox .movieImage {
+  .fifthSection .movieImage {
       width: 100%;
       height: auto;
       cursor: pointer;
   }
   
   
-  div .fifthSection .movieBox .movieText .movieName {
+  .fifthSection .movieName {
       color: #fff;
-      font-size: 15px;
+      font-size: 22px;
       font-family: serif;
   }
   
   
-  div .fifthSection .movieBox .movieText .movieDate {
+  .fifthSection .movieDate {
       margin-top: -15px;
-      font-size: 10px;
+      font-size: 16px;
       letter-spacing: 1.5px;
       color: white;
   }
   
-  
-  div .rightSide {
+  /* .rightSide {
       border: 1px solid #ddd;
-      border-top: none;
-      border-right: 10px solid white;
+      border-top: 2px solid white;
+      border-right: 10px solid #040420;
+      border-left: 10px solid #040420;
       border-bottom: none;
-      margin-top: 100px;
-  }
+  } */
 
-  div .rightSide .imageBox:hover{
+  .rightSide .imageBox:hover{
       cursor: pointer;
   }
 
   #heart:hover{
       cursor: pointer;
   }
-  
- /* CSS for the fixed block */
-.rightSide .fixQueue {
-    width: 400px; 
-    height: 60px;
-    /* border:2px solid #fff; */
-    border-top: 2px solid #f5f5fa;
-    background-color: #1d1db7;
+
+ .imageBox{
+    padding-top: 15px;
+    padding-bottom: 15px;
+ }
+
+.rightSide {
+  position: relative;
+}
+
+.fixQueue {
+    width: 32%; 
+    height: 64px;
+  /* margin-top: 60px; */
+  /* border-top:2px solid #fff; */
+    top: 140px;
+    background-color: #040420;
     position:fixed;
     z-index: 2;
 }
@@ -336,20 +380,82 @@
 .movePlay{
     padding-top: 80px;
     position:absolute;
-    /* overflow-y: hidden; */
+    bottom:20%;
+  /* overflow-y: hidden; */
 
 }
 
+.number{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.display{
+    padding-top: 10px;
+    margin:20px;
+    width:180px;
+}
+.name{
+    width: 2px;
+}
   
   @media only screen and (max-width: 768px) {
     
     
-      header .inputs  .third{
-        
-          width: 100px;
-       
+      .second{
+          width:16px
       }
+      .third{
+          width: 20px;
+      }
+      .first{
+          width: 20px;
+      }
+      
+      .firstSection{
+        padding-top: 40px;
+      }
+
+      .rightSide{
+          padding-top: 80px;
+      }
+      .fixQueue{
+          /* width:10%; */
+          height:150px;
+      }
+      /* .changeFontQ{
+          font-size: 30px;
+      } */
+      /* .movePlay{
+        height:800px;
+      } */
   
   }
+
+  .r{
+    position: fixed !important;
+    left: 66%;
+    height: 100vh;
+    overflow: scroll;
+  }
+
+
+  /* .scrollRight{
+    width:34%;
+    overflow-y:scroll;
+  }
+  .scrollRight::webkit-scrollbar{
+    display:none;
+  } */
+
+  /* @media only screen and (max-width: 768px) {
+    
+    
+    .changeFontQ{
+        padding: 60px;
+        position:relative;
+    }
+
+} */
+
   
   
