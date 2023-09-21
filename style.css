@@ -21,7 +21,7 @@
   
   header {
       background-color : #040420 ;
-      border-bottom: 2px solid rgb(243, 235, 235);
+      /* border-bottom: 2px solid rgb(243, 235, 235); */
   }
 
   header .inputs  {
@@ -68,11 +68,12 @@
   /* SECTION Styling */
   section {
       margin-top: 80px;
-      padding: 40px;
+      padding: 20px;
       /* display: flex; */
       border: 2px solid white;
+      border-top:20px solid white;
       background-color : #040420 ;
-      height: 100vh;
+      height: 85vh;
       width: auto; /* Set the fixed width of the container */
       overflow: auto;
   }
@@ -82,6 +83,7 @@
       overflow: auto;
       padding: 0px;
   } */
+  
 
   .leftSide{
       overflow-y: scroll;
@@ -92,12 +94,27 @@
       width:66%;
   }
 
-  .leftSide ::-webkit-scrollbar{
+  .leftSide::-webkit-scrollbar{
       display: none;
   }
   
 
   /* Start */
+
+  .scrollLeft{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 40px;
+    border-right:2px solid white;
+    height: 100vh;
+    width:66%;
+}
+
+.scrollLeft ::-webkit-scrollbar{
+    display: none;
+}
+
+  
 
   /* First section */
   section .firstSection > div {
@@ -358,16 +375,27 @@
   }
 
  .imageBox{
-    padding-top: 15px;
-    padding-bottom: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
  }
 
 .rightSide {
-  position: relative;
+      position: absolute;
+      height: 100vh;
+}
+
+.scrollRight {
+      overflow-y: scroll; 
+      height:100vh;
+      width: 33%
+}
+
+.scrollRight::-webkit-scrollbar {
+      display: none;
 }
 
 .fixQueue {
-    width: 32.5%; 
+    width: 32%; 
     height: 64px;
   /* margin-top: 60px; */
   /* border-top:2px solid #fff; */
@@ -411,6 +439,23 @@
           width: 20px;
       }
       
+      .line{
+         border-bottom:1px solid #fff;
+      }
+
+      .leftSide{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-top: 40px;
+        border-right:2px solid white;
+  
+        width:66%;
+    }
+  
+    .leftSide::-webkit-scrollbar{
+        display: none;
+    }
+
       .firstSection{
         padding-top: 40px;
       }
@@ -419,24 +464,76 @@
           padding-top: 80px;
       }
       .fixQueue{
-          /* width:10%; */
+          width:31%;
+          border-top:20px #fff;
           height:150px;
       }
-      /* .changeFontQ{
-          font-size: 30px;
-      } */
+      .changeFontQ{
+          font-size: 24px;
+          padding-top: 15px;
+          padding-right: 60px;
+      }
+
+      .fontQ{
+          padding-top: 40px;
+          font-size: 24px;
+      }
+
+      @media only screen and (max-width: 575px) {
+          .fixQueue{
+              position: relative;
+              top: -80px;
+              width: 90vw;
+          }
+
+          .leftSide{
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding-top: 40px;
+            border-right:2px solid white;
+      
+            width:66%;
+        }
+      
+        .leftSide::-webkit-scrollbar{
+            display: none;
+        }
+
+          .changeFontQ{
+            font-size: 48px;
+            padding-top: 28px;
+            /* border-top: -500px; */
+            /* padding-right: 60px; */
+        }
+  
+        .fontQ{
+            /* padding-top: 40px; */
+            font-size: 44px;
+        }
+
+        .movePlay{
+            padding-top:0px;
+        }
+      }
+      
       /* .movePlay{
         height:800px;
+      } */
+
+      /* .r{
+        left: 0 !important;
       } */
   
   }
 
-  .r{
-    position: fixed !important;
-    left: 66%;
-    height: 100vh;
-    overflow: scroll;
-  }
+
+    /* .r{
+        position: fixed !important;
+        left: 66%;
+        height: 100vh;
+        overflow: scroll;
+    } */
+
 
 
   /* .scrollRight{
@@ -447,6 +544,26 @@
     display:none;
   } */
 
+  /* .scrollLeft {
+    overflow-y: scroll;
+    width: 66%;
+    height: 100vh;
+}
+
+.scrollLeft::-webkit-scrollbar {
+display: none;
+} */
+
+/* .scrollRight {
+    overflow-y: scroll; 
+height:100vh;
+width: 33%
+}
+
+.scrollRight::-webkit-scrollbar {
+display: none;
+} */
+
   /* @media only screen and (max-width: 768px) {
     
     
@@ -456,6 +573,7 @@
     }
 
 } */
+
 
   
   
