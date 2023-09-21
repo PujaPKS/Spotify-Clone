@@ -40,8 +40,8 @@
   header .inputs  .second{
       color: #fff;
       border-color: #18d860;
-      font-size: 25px;
-      width: 340px;
+      font-size: 20px;
+      width: 300px;
       padding: 4px 0 4px 50px;
       background-color : #84b1a7 ;
   }
@@ -67,7 +67,7 @@
   
   /* SECTION Styling */
   section {
-      margin-top: 100px;
+      margin-top: 80px;
       padding: 40px;
       /* display: flex; */
       border: 2px solid white;
@@ -367,18 +367,18 @@
 }
 
 .fixQueue {
-    width: 32%; 
+    width: 32.5%; 
     height: 64px;
   /* margin-top: 60px; */
   /* border-top:2px solid #fff; */
-    top: 140px;
+    top: 100px;
     background-color: #040420;
     position:fixed;
     z-index: 2;
 }
 
 .movePlay{
-    padding-top: 80px;
+    padding-top: 140px;
     position:absolute;
     bottom:20%;
   /* overflow-y: hidden; */
@@ -391,14 +391,14 @@
 }
 .display{
     padding-top: 10px;
-    margin:20px;
+    /* margin:20px; */
     width:180px;
 }
 .name{
     width: 2px;
 }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     
     
       .second{
