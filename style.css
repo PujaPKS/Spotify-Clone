@@ -76,6 +76,7 @@
       height: 85vh;
       width: auto; /* Set the fixed width of the container */
       overflow: auto;
+      
   }
 
    /* .fixedContainer{
@@ -387,7 +388,7 @@
 .scrollRight {
       overflow-y: scroll; 
       height:100vh;
-      width: 33%
+      width: 33%;
 }
 
 .scrollRight::-webkit-scrollbar {
@@ -408,7 +409,7 @@
 .movePlay{
     padding-top: 140px;
     position:absolute;
-    bottom:20%;
+    bottom:8%;
   /* overflow-y: hidden; */
 
 }
@@ -425,6 +426,18 @@
 .name{
     width: 2px;
 }
+.song{
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: bradley hand, cursive;
+}
+.singer{
+    font-weight: normal;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* <span class="font-weight-bold" style="font-size: 1.5rem; font-family:bradley hand, cursive  ;" >The Climb</span> <br/>  */
+/* <span class="font-weight-normal" style="font-size: 20px; font-family:'Times New Roman', Times, serif; " > Miley Cyrus</span> */
   
   @media only screen and (max-width: 767px) {
     
@@ -464,10 +477,20 @@
           padding-top: 80px;
       }
       .fixQueue{
-          width:31%;
+          width:33%;
           border-top:20px #fff;
-          height:150px;
+          height:60px;
+          top: 156.5px;
+          left: 503px;
       }
+
+      .movePlay{
+        top:38px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 5px;
+    }
+
       .changeFontQ{
           font-size: 24px;
           padding-top: 15px;
@@ -475,16 +498,42 @@
       }
 
       .fontQ{
-          padding-top: 40px;
+          padding-top: 15px;
           font-size: 24px;
       }
+
+      .number{
+        font-size: 1.0rem;
+        margin-right: 12px;
+    }
+    .display{
+        padding-top: 10px;
+        padding-left: 0px;
+        /* margin:20px; */
+        width:80px;
+    }
+
+    .song{
+        font-weight: bold;
+        font-size: 1.0rem;
+        font-family: bradley hand, cursive;
+    }
+    .singer{
+        font-weight: normal;
+        font-size: 12px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    }
 
       @media only screen and (max-width: 575px) {
           .fixQueue{
               position: relative;
               top: -80px;
-              width: 90vw;
+              width: 80vw;
+              left: 0px;
+              /* padding-top: 68px; */
           }
+          
 
           .leftSide{
             overflow-y: scroll;
@@ -500,19 +549,35 @@
         }
 
           .changeFontQ{
-            font-size: 48px;
-            padding-top: 28px;
+            font-size: 32px;
+            /* padding-top: 28px; */
             /* border-top: -500px; */
             /* padding-right: 60px; */
         }
   
         .fontQ{
             /* padding-top: 40px; */
-            font-size: 44px;
+            font-size: 32px;
         }
+
 
         .movePlay{
             padding-top:0px;
+        }
+
+        /* .song{
+            font-weight: bold;
+            font-size: 1.0rem;
+            font-family: bradley hand, cursive;
+        } */
+        .singer{
+            font-weight: normal;
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #heart{
+            padding-left: 100px;
         }
       }
       
@@ -524,7 +589,6 @@
         left: 0 !important;
       } */
   
-  }
 
 
     /* .r{
