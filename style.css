@@ -62,16 +62,17 @@
       right:0;
       z-index: 2;
       background-color:#040420;
+      border-bottom: 2px solid white;
   }
 
   
   /* SECTION Styling */
   section {
       margin-top: 80px;
-      padding: 20px;
+      padding: 28px;
       /* display: flex; */
       border: 2px solid white;
-      border-top:20px solid white;
+      /* border-top:20px solid white; */
       background-color : #040420 ;
       height: 100vh;
       width: auto; /* Set the fixed width of the container */
@@ -129,19 +130,20 @@
 }
 
    
-.pop:hover{
-        height: 20rem;
-    }
+/* .pop:hover{
+        height: 15rem;
+        width: auto;
+    } */
 
   .firstSection .bannerBox img {
     object-fit: cover;
-    padding-right: 14rem;
+    /* padding-right: 10rem; */
 }
 
   .firstSection .bannerBox img:hover {
     /* scale: 1.4; */
-    transition: .4s;
-    transform: scale(1.2);
+    transition: 0.4s;
+    transform: scale(1.1);
     border: 1x solid red;
     cursor: pointer;
 }
@@ -405,7 +407,7 @@
     height: 64px;
   /* margin-top: 60px; */
   /* border-top:2px solid #fff; */
-    top: 100px;
+    top: 97.5px;
     background-color: #040420;
     position:fixed;
     z-index: 2;
