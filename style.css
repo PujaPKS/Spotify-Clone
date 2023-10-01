@@ -73,7 +73,7 @@
       border: 2px solid white;
       border-top:20px solid white;
       background-color : #040420 ;
-      height: 85vh;
+      height: 100vh;
       width: auto; /* Set the fixed width of the container */
       overflow: auto;
       
@@ -128,15 +128,20 @@
     overflow: hidden;
 }
 
+   
+.pop:hover{
+        height: 20rem;
+    }
+
   .firstSection .bannerBox img {
     object-fit: cover;
-    padding-right: 10px;
+    padding-right: 14rem;
 }
 
   .firstSection .bannerBox img:hover {
-    scale: 1.4;
-    /* transition: all ease 2s; */
-    /* transform: scale(1.4); */
+    /* scale: 1.4; */
+    transition: .4s;
+    transform: scale(1.2);
     border: 1x solid red;
     cursor: pointer;
 }
@@ -421,7 +426,7 @@
 .display{
     padding-top: 10px;
     /* margin:20px; */
-    width:180px;
+    width:18vw;
 }
 .name{
     width: 2px;
