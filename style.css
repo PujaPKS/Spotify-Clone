@@ -414,9 +414,9 @@
 }
 
 .movePlay{
-    padding-top: 140px;
+    padding-top: 120px;
     position:absolute;
-    bottom:8%;
+    bottom:4%;
   /* overflow-y: hidden; */
 
 }
@@ -428,7 +428,7 @@
 .display{
     padding-top: 10px;
     /* margin:20px; */
-    width:18vw;
+    width:14vw;
 }
 .name{
     width: 2px;
@@ -443,9 +443,6 @@
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
-/* <span class="font-weight-bold" style="font-size: 1.5rem; font-family:bradley hand, cursive  ;" >The Climb</span> <br/>  */
-/* <span class="font-weight-normal" style="font-size: 20px; font-family:'Times New Roman', Times, serif; " > Miley Cyrus</span> */
-  
   @media only screen and (max-width: 767px) {
     
     
